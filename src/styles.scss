@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+}
 
 // =============================================================
 // MIXIN GLOBAL — Pattern de fond avec opacité contrôlable
@@ -55,9 +58,10 @@
 }
 
 // Décommentez pour d'autres sections :
-// .about-section {
-//   --pattern-opacity: var(--pattern-opacity-about);
-// }
+.about-section {
+  --pattern-opacity: var(--pattern-opacity-about);
+}
+
 // .contact-section {
 //   --pattern-opacity: var(--pattern-opacity-contact);
 // }
