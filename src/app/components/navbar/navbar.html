@@ -1,0 +1,67 @@
+<header class="navbar">
+  <nav class="nav-container">
+    <a routerLink="/" class="logo-link" aria-label="Accueil ITEnergy">
+      <div class="logo-container">
+        <img src="itenergy (2).png" alt="ITEnergy Logo" class="logo-img logo-mono" />
+      </div>
+    </a>
+
+    <!-- Navigation Desktop -->
+    <ul class="nav-list" role="navigation" aria-label="Navigation principale">
+      <li>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a routerLink="/solutions" routerLinkActive="active" class="nav-link">
+          Nos solutions
+        </a>
+      </li>
+      <li>
+        <a routerLink="/apropos" routerLinkActive="active" class="nav-link">
+          À propos
+        </a>
+      </li>
+    </ul>
+
+    <!-- CTA Desktop -->
+    <div class="nav-actions">
+      <a routerLink="/contact" class="nav-btn" aria-label="Nous contacter">
+        Nous contacter
+      </a>
+    </div>
+
+    <!-- Burger Mobile -->
+    <button class="burger-btn" [class.open]="isMenuOpen()" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen()"
+      aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+
+  <!-- Menu Mobile Overlay -->
+  <nav id="mobile-nav" class="mobile-menu" [class.active]="isMenuOpen()" [attr.aria-hidden]="!isMenuOpen()">
+    <ul class="mobile-nav-list">
+      <li>
+        <a routerLink="/" routerLinkActive="mobile-active" [routerLinkActiveOptions]="{exact: true}"
+          class="mobile-nav-link" (click)="closeMenu()">Accueil</a>
+      </li>
+      <li>
+        <a routerLink="/solutions" routerLinkActive="mobile-active" class="mobile-nav-link" (click)="closeMenu()">Nos
+          solutions</a>
+      </li>
+      <li>
+        <a routerLink="/apropos" routerLinkActive="mobile-active" class="mobile-nav-link" (click)="closeMenu()">À
+          propos</a>
+      </li>
+      <li>
+        <a routerLink="/contact" class="nav-btn" style="width: 100%; display: block; margin-top: 16px;" (click)="closeMenu()"
+          aria-label="Nous contacter">
+          Nous contacter
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

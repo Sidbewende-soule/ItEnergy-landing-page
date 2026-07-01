@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+
+// =============================================================
+// MIXIN GLOBAL — Pattern de fond avec opacité contrôlable
+// Usage dans un composant: @include apply-pattern($bg-color)
+//   $bg-color : couleur de fond sous le pattern — ex: #FFFFFF
+//
+// ⚙️ CONTRÔLE DE L'OPACITÉ PAR SECTION → modifier uniquement ci-dessous
+// =============================================================
+
+// ── Opacités par section (modifier ici pour chaque section / page) ──────────
+// Valeurs de 0 (invisible) à 1 (plein opaque)
+:root {
+  --pattern-opacity-services: 0.03; // Section "Nos Services"     → home
+  --pattern-opacity-partners: 0.03; // Section "Nos Partenaires"  → home
+  // Ajoutez d'autres sections ci-dessous au besoin :
+  // --pattern-opacity-about  : 0.06; // Page "À propos"
+  // --pattern-opacity-contact: 0.04; // Page "Contact"
+}
+
+// ── Fin des contrôles d'opacité ─────────────────────────────────────────────
+
+// Le mixin lit la variable CSS locale --pattern-opacity de l'élément courant.
+// Chaque section doit exposer sa propre variable (voir les blocs ci-dessous).
+@mixin apply-pattern($bg-color: transparent) {
+  position: relative;
+  isolation: isolate; // Crée un contexte d'empilement autonome
+  background-color: $bg-color; // Couleur de fond principale (derrière le pattern)
+
+  // Le pattern se pose PAR-DESSUS la couleur de fond, sous le contenu
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/pattern.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    opacity: var(--pattern-opacity, 0.05); // Lit la variable CSS de la section courante
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+// ── Liaisons variables → sections ───────────────────────────────────────────
+// Chaque bloc relie la variable globale à la propriété locale --pattern-opacity
+// utilisée par le pseudo-élément ::before du mixin.
+
+.services-section {
+  --pattern-opacity: var(--pattern-opacity-services);
+}
+
+.partners-section {
+  --pattern-opacity: var(--pattern-opacity-partners);
+}
+
+// Décommentez pour d'autres sections :
+// .about-section {
+//   --pattern-opacity: var(--pattern-opacity-about);
+// }
+// .contact-section {
+//   --pattern-opacity: var(--pattern-opacity-contact);
+// }

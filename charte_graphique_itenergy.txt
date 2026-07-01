@@ -1,0 +1,28 @@
+# Charte Graphique Simplifiée - ITEnergy SARL
+
+---
+
+## 1. Palette de Couleurs
+
+| Couleur | Usage | HEX | RGB | CMJN |
+| :--- | :--- | :--- | :--- | :--- |
+| **Orange Énergie** | Accent, "T" stylisé, Arc dynamique | `#F59223` | `245, 146, 35` | `0%, 50%, 95%, 4%` |
+| **Noir Technologique** | Texte principal, "I", "Energy", Slogan | `#0A0A0A` | `10, 10, 10` | `0%, 0%, 0%, 100%` |
+| **Blanc Pur** | Fond, Contre-forme, Version négative | `#FFFFFF` | `255, 255, 255` | `0%, 0%, 0%, 0%` |
+
+---
+
+## 2. Typographie
+
+* **Logotype ("Energy") :** Sans-Serif géométrique et robuste.
+  * *Alternatives :* Futura Bold, Montserrat Bold, Century Gothic Bold.
+* **Slogan ("La solution TIC autrement") :** Sans-Serif moderne et fluide avec des formes arrondies.
+  * *Alternatives :* Comfortaa, Quicksand.
+
+---
+
+## 3. Règles d'Utilisation
+
+* **Version Négative :** Sur fond sombre, passer tous les éléments textuels noirs en blanc (`#FFFFFF`). L'orange reste identique.
+* **Zone de sécurité :** Laisser un espace vide de la taille du "E" tout autour du logo.
+* **Interdictions :** Ne pas déformer, étirer ou modifier l'angle de la courbe orange.
