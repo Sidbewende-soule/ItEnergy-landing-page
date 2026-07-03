@@ -71,15 +71,45 @@ $white: #FFFFFF;
     @include apply-pattern($bg-light);
 }
 
-// ─── GRILLE 3 colonnes ───
-.solutions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+// ─── SPLIT LAYOUT ───
+.solutions-split-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
 
-    @media (max-width: 1024px) {
-        grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
     }
+}
+
+.solutions-left-image {
+    flex: 0 0 35%;
+    max-width: 380px;
+    position: sticky;
+    top: 120px;
+    margin-left: calc(-50vw + 50%); // Colle l'image à l'extrême gauche de l'écran
+
+    @media (max-width: 992px) {
+        position: static;
+        max-width: 280px;
+        margin-left: 0; // Réinitialise sur tablette/mobile
+    }
+
+    .pointeur-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 0 12px 12px 0; // Pas d'arrondi à gauche car collé au bord
+    }
+}
+
+.solutions-right-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
 
     @media (max-width: 640px) {
         grid-template-columns: 1fr;
