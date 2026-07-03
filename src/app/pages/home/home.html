@@ -55,32 +55,63 @@
   <!-- Nos Services Section -->
   <section id="services" class="services-section">
     <div class="container">
-      <h2 class="section-title">Nos <span class="text-accent">Services</span></h2>
+      <h2 class="section-title">
+        Nos <span class="text-accent">Services</span>
+      </h2>
+
       <div class="services-grid">
+
         <!-- Card 1 -->
-        <div class="service-card">
-          <div class="card-icon-wrapper">
-            <div class="card-icon icon-network"></div>
+        <div class="service-card service-card--dark">
+          <div class="service-image">
+            <img src="/reseau-it.png" alt="Réseau Informatique">
           </div>
-          <h3 class="card-title">{{ services[0].title }}</h3>
-          <p class="card-text">{{ services[0].description }}</p>
-        </div>
-        <!-- Card 2 (Middle) -->
-        <div class="service-card highlight">
-          <div class="card-icon-wrapper">
-            <div class="card-icon icon-hardware"></div>
+          <div class="card-content">
+            <h3 class="card-title">
+              {{ services[0].title }}
+            </h3>
+            <ul class="card-list">
+              <li>Installation réseau</li>
+              <li>Configuration et maintenance</li>
+              <li>Sécurité réseau</li>
+            </ul>
           </div>
-          <h3 class="card-title">{{ services[1].title }}</h3>
-          <p class="card-text">{{ services[1].description }}</p>
         </div>
+
+        <!-- Card 2 -->
+        <div class="service-card service-card--orange">
+          <div class="service-image">
+            <img src="/matériel-it-img.png" alt="Matériel informatique">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              {{ services[1].title }}
+            </h3>
+            <ul class="card-list">
+              <li>Ordinateurs et périphériques</li>
+              <li>Serveurs et stockage</li>
+              <li>Accessoires informatiques</li>
+            </ul>
+          </div>
+        </div>
+
         <!-- Card 3 -->
-        <div class="service-card">
-          <div class="card-icon-wrapper">
-            <div class="card-icon icon-solar"></div>
+        <div class="service-card service-card--dark">
+          <div class="service-image">
+            <img src="/énergie-solaire2.png" alt="Énergie solaire">
           </div>
-          <h3 class="card-title">{{ services[2].title }}</h3>
-          <p class="card-text">{{ services[2].description }}</p>
+          <div class="card-content">
+            <h3 class="card-title">
+              {{ services[2].title }}
+            </h3>
+            <ul class="card-list">
+              <li>Panneaux solaires</li>
+              <li>Onduleurs et batteries</li>
+              <li>Installation complète</li>
+            </ul>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -90,9 +121,10 @@
     <div class="container">
       <h2 class="section-title">Nos <span class="text-accent">Partenaires</span></h2>
       <div class="partners-grid">
-        <img src="houndegold.png" alt="Houndé Gold" class="partner-logo-img" />
-        <img src="neremining.png" alt="Néré Mining" class="partner-logo-img" />
-        <img src="sopamib.png" alt="Sopamib" class="partner-logo-img" />
+        <img src="houndegold (2).png" alt="Houndé Gold" class="partner-logo-img" />
+        <img src="neremining (2).png" alt="Néré Mining" class="partner-logo-img" />
+        <img src="sopamib (2).png" alt="Sopamib" class="partner-logo-img" />
+        <img src="particuliers.png" alt="particuliers" class="partner-logo-img" />
       </div>
     </div>
   </section>
