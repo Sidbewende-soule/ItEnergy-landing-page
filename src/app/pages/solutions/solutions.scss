@@ -154,6 +154,9 @@ $white: #FFFFFF;
 // ─── RESPONSIVE ───
 @media (max-width: 768px) {
     .solutions-hero {
+        padding: 100px 16px 40px;
+        min-height: 400px;
+        
         .hero-title {
             font-size: 2.5rem;
         }
@@ -169,5 +172,21 @@ $white: #FFFFFF;
 
     .intro-card {
         padding: 32px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .solutions-hero {
+        .hero-title {
+            font-size: 2rem;
+        }
+    }
+    
+    .intro-card {
+        padding: 24px 16px;
+        
+        h2 {
+            font-size: 1.5rem;
+        }
     }
 }

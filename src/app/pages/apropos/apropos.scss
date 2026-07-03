@@ -460,7 +460,8 @@ $white: #FFFFFF;
 // ── RESPONSIVE ────────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
   .apropos-hero {
-    padding: 120px 16px 60px;
+    padding: 100px 16px 40px;
+    min-height: 400px;
 
     .hero-title {
       font-size: 2.5rem;
@@ -491,7 +492,64 @@ $white: #FFFFFF;
     font-size: 1.7rem;
   }
 
-  .mission-card {
+  .mission-card, .intro-card {
     padding: 32px 24px;
+  }
+  
+  .why-content {
+    padding: 40px 24px;
+  }
+  
+  .why-image {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apropos-hero {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .intro-card {
+    padding: 24px 16px;
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .why-content {
+    padding: 32px 16px;
+    
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+  
+  .process-step {
+    padding: 35px 16px 16px 16px;
+    
+    .step-number {
+      font-size: 5rem;
+    }
+  }
+  
+  .cta-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .btn-cta {
+    padding: 12px 24px;
+    font-size: 1rem;
   }
 }
