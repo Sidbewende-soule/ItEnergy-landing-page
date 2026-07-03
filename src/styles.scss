@@ -16,9 +16,9 @@ html {
 :root {
   --pattern-opacity-services: 0.03; // Section "Nos Services"     → home
   --pattern-opacity-partners: 0.03; // Section "Nos Partenaires"  → home
-  // Ajoutez d'autres sections ci-dessous au besoin :
-  --pattern-opacity-about: 0.03; // Page "À propos"
-  --pattern-opacity-contact: 0.03; // Page "Contact"
+
+  --pattern-opacity-contact: 0.045; // Page "Contact"
+
 }
 
 // ── Fin des contrôles d'opacité ─────────────────────────────────────────────
@@ -57,11 +57,14 @@ html {
   --pattern-opacity: var(--pattern-opacity-partners);
 }
 
-// Décommentez pour d'autres sections :
 .about-section {
   --pattern-opacity: var(--pattern-opacity-about);
 }
 
-.contact-section {
+
+.info-section,
+.address-section,
+.form-section {
+
   --pattern-opacity: var(--pattern-opacity-contact);
 }

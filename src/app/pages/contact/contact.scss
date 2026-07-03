@@ -43,7 +43,7 @@ $white: #FFFFFF;
   background-color: $primary;
   background-image:
     linear-gradient(rgba($primary, 0.55), rgba($primary, 0.55)),
-    url('/contact.jpg');
+    url('/contact2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -76,7 +76,8 @@ $white: #FFFFFF;
 // ── NOUS CONTACTER (horizontal) ──
 .info-section {
   padding: 80px 0 60px;
-  @include apply-pattern($bg-light);
+  background-color: $white;
+  @include apply-pattern($white);
 }
 
 .info-cards {
@@ -173,36 +174,156 @@ $white: #FFFFFF;
   }
 }
 
-// ── OÙ SOMMES-NOUS + MAP ──
-.map-section {
+// ── OÙ SOMMES-NOUS (carte visite stylisée) ──
+.address-section {
   padding: 60px 0 80px;
+
+  background-color: $bg-light;
   @include apply-pattern($bg-light);
+}
 
-  .section-title {
-    margin-bottom: 48px;
+
+// ── Carte d'adresse — Layout 3 colonnes ──
+.address-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: $white;
+  padding: 40px 48px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba($primary, 0.04);
+  border: 1px solid rgba($primary, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: rgba($cyan, 0.35);
+    box-shadow: 0 20px 40px rgba($cyan, 0.08);
+    transform: translateY(-4px);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px;
+    gap: 28px;
   }
 }
 
-.map-wrapper {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba($primary, 0.1);
+// Colonne de base
+.address-col {
+  display: flex;
+  flex-direction: column;
+}
 
-  iframe {
-    display: block;
-    width: 100%;
-    height: 450px;
+// ── Colonne GAUCHE : icône + rue + titre ──
+.address-col-left {
+  flex: 0 0 auto;
+  align-items: flex-start;
+  gap: 12px;
+}
 
-    @media (max-width: 768px) {
-      height: 300px;
-    }
+.address-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($cyan, 0.08);
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+  margin-bottom: 4px;
+
+  .address-card:hover & {
+    transform: scale(1.06);
+  }
+
+  svg {
+    width: 34px;
+    height: 34px;
   }
 }
+
+.address-street {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: $primary;
+  margin: 0;
+}
+
+.address-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: $text-muted;
+  margin: 0;
+  letter-spacing: 0;
+}
+
+// ── Colonne CENTRE : bouton ──
+.address-col-center {
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.address-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  background-color: $primary;
+  color: $white;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $cyan;
+    color: $white;
+    transform: translateY(-2px);
+  }
+}
+
+// ── Colonne DROITE : détail + pays côte à côte ──
+.address-col-right {
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+.address-detail,
+.address-country {
+  font-size: 0.95rem;
+  color: $text-muted;
+  margin: 0;
+  padding: 6px 12px;
+  background-color: rgba($primary, 0.04);
+  border-radius: 8px;
+}
+
+
 
 // ── FORMULAIRE ──
 .form-section {
   padding: 80px 0 100px;
-  @include apply-pattern($bg-light);
+
+  background-color: $white;
+  @include apply-pattern($white);
+
 }
 
 .contact-form {
@@ -307,7 +428,7 @@ $white: #FFFFFF;
     padding: 60px 0 40px;
   }
 
-  .map-section {
+  .address-section {
     padding: 40px 0 60px;
   }
 
