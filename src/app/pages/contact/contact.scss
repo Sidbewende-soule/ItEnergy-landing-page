@@ -1,0 +1,314 @@
+$primary: #0A0A0A;
+$cyan: #F59223;
+$text-main: #0A0A0A;
+$text-muted: #51545C;
+$bg-light: #F7FAFC;
+$white: #FFFFFF;
+
+.contact-page {
+  width: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.text-accent {
+  color: $cyan;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: $primary;
+  margin-bottom: 48px;
+}
+
+// ── HERO ──
+.contact-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $primary;
+  background-image:
+    linear-gradient(rgba($primary, 0.55), rgba($primary, 0.55)),
+    url('/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 24px;
+  margin-top: -26px;
+  padding-top: 5px;
+
+  .hero-content {
+    max-width: 800px;
+    z-index: 10;
+    color: $white;
+  }
+
+  .hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 1000;
+    color: $white;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba($white, 0.8);
+  }
+}
+
+// ── NOUS CONTACTER (horizontal) ──
+.info-section {
+  padding: 80px 0 60px;
+  background-color: $white;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-card {
+  background-color: $bg-light;
+  border-radius: 16px;
+  padding: 40px 24px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $cyan;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba($cyan, 0.12);
+  }
+
+  .card-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: $cyan;
+    background-color: rgba($cyan, 0.1);
+    border-radius: 14px;
+  }
+
+  h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $primary;
+    margin: 0 0 8px;
+  }
+
+  p {
+    color: $text-muted;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  a {
+    color: $text-muted;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+}
+
+.card-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $primary;
+    color: $white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $cyan;
+      color: $primary;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// ── OÙ SOMMES-NOUS + MAP ──
+.map-section {
+  padding: 60px 0 80px;
+  background-color: $bg-light;
+
+  .section-title {
+    margin-bottom: 48px;
+  }
+}
+
+.map-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba($primary, 0.1);
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+}
+
+// ── FORMULAIRE ──
+.form-section {
+  padding: 80px 0 100px;
+  background-color: $white;
+}
+
+.contact-form {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: $bg-light;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba($primary, 0.05);
+
+  @media (max-width: 560px) {
+    padding: 24px;
+  }
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  margin-bottom: 24px;
+
+  label {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $primary;
+    margin-bottom: 8px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid rgba($primary, 0.1);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: $primary;
+    background-color: $white;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: $cyan;
+    }
+
+    &::placeholder {
+      color: $text-muted;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px 32px;
+  background-color: $primary;
+  color: $white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border: 2px solid $primary;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+  }
+}
+
+// ── RESPONSIVE ──
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 120px 16px 60px;
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .info-section {
+    padding: 60px 0 40px;
+  }
+
+  .map-section {
+    padding: 40px 0 60px;
+  }
+
+  .form-section {
+    padding: 60px 0;
+  }
+}
