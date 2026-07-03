@@ -77,7 +77,7 @@ $white: #FFFFFF;
 .info-section {
   padding: 80px 0 60px;
   background-color: $white;
-  @include apply-pattern($white);
+  @include apply-pattern($bg-light);
 }
 
 .info-cards {
@@ -322,7 +322,7 @@ $white: #FFFFFF;
   padding: 80px 0 100px;
 
   background-color: $white;
-  @include apply-pattern($white);
+  @include apply-pattern($bg-light);
 
 }
 
