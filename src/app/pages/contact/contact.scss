@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 $primary: #0A0A0A;
 $cyan: #F59223;
 $text-main: #0A0A0A;
@@ -7,6 +9,7 @@ $white: #FFFFFF;
 
 .contact-page {
   width: 100%;
+  --pattern-opacity: var(--pattern-opacity-contact);
 }
 
 .container {
@@ -73,7 +76,7 @@ $white: #FFFFFF;
 // ── NOUS CONTACTER (horizontal) ──
 .info-section {
   padding: 80px 0 60px;
-  background-color: $white;
+  @include apply-pattern($bg-light);
 }
 
 .info-cards {
@@ -173,7 +176,7 @@ $white: #FFFFFF;
 // ── OÙ SOMMES-NOUS + MAP ──
 .map-section {
   padding: 60px 0 80px;
-  background-color: $bg-light;
+  @include apply-pattern($bg-light);
 
   .section-title {
     margin-bottom: 48px;
@@ -199,7 +202,7 @@ $white: #FFFFFF;
 // ── FORMULAIRE ──
 .form-section {
   padding: 80px 0 100px;
-  background-color: $white;
+  @include apply-pattern($bg-light);
 }
 
 .contact-form {
