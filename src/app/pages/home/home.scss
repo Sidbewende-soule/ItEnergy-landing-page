@@ -440,6 +440,26 @@ $white: #FFFFFF;
       box-shadow: 0 24px 48px rgba(#F59223, .25);
     }
   }
+
+  // Variante noire : uniquement la zone texte
+  &.service-card--dark {
+    .card-content {
+      background: $primary; // $primary = #0A0A0A (noir)
+    }
+
+    .card-title {
+      color: $white;
+    }
+
+    .card-list {
+      color: rgba($white, 0.75);
+    }
+
+    &:hover {
+      border-color: $cyan;
+      box-shadow: 0 24px 48px rgba($primary, .3);
+    }
+  }
 }
 
 .service-image {
