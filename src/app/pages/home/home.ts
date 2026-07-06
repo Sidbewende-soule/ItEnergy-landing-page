@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FadeUpDirective } from '../../directives/fade-up.directive';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FadeUpDirective],
   templateUrl: './home.html',
   styleUrls: ['./home.scss']
 })

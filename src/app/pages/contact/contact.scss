@@ -403,11 +403,77 @@ $white: #FFFFFF;
   cursor: pointer;
   transition: all 0.3s ease;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: transparent;
     color: $primary;
   }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 }
+
+// ── FEEDBACK MESSAGES ──
+.form-feedback {
+  max-width: 720px;
+  margin: 0 auto 24px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.98rem;
+  
+  strong {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  p {
+    margin: 0;
+    color: inherit;
+    opacity: 0.85;
+  }
+
+  .feedback-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  &--success {
+    background-color: rgba(22, 163, 74, 0.1);
+    border: 1px solid rgba(22, 163, 74, 0.3);
+    color: #15803d;
+    
+    .feedback-icon {
+      background-color: rgba(22, 163, 74, 0.15);
+      color: #15803d;
+    }
+  }
+  
+  &--error {
+    background-color: rgba(220, 38, 38, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: #b91c1c;
+    
+    .feedback-icon {
+      background-color: rgba(220, 38, 38, 0.15);
+      color: #b91c1c;
+    }
+  }
+}
+
+
 
 // ── RESPONSIVE ──
 @media (max-width: 768px) {

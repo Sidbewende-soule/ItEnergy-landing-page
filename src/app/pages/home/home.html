@@ -25,11 +25,11 @@
   <section id="about" class="about-section">
     <div class="container">
       <div class="about-grid">
-        <div class="about-text">
+        <div class="about-text" appFadeUp [fadeDelay]="0" [fadeThreshold]="0.1">
           <h2 class="section-title" style="text-align: left;">Qui <span class="text-accent">sommes-nous ?</span></h2>
           <p class="about-description">
-            IT Energy est une entreprise spécialisée dans les technologies de l’information, la sécurité informatique et
-            l’intégration de solutions digitales.
+            IT Energy est une entreprise spécialisée dans les technologies de l'information, la sécurité informatique et
+            l'intégration de solutions digitales.
             Nous offrons un accompagnement personnalisé aux entreprises souhaitant moderniser leurs systèmes, sécuriser
             leurs données ou améliorer leur productivité grâce aux outils numériques.
           </p>
@@ -39,7 +39,7 @@
           </p>
           <a href="/apropos" class="btn btn-outline">En savoir plus sur nous</a>
         </div>
-        <div class="about-image">
+        <div class="about-image" appFadeUp [fadeDelay]="150" [fadeThreshold]="0.1">
           <img src="Gemini.png" alt="Description de votre image">
 
           <div class="placeholder-glow"></div>
@@ -55,14 +55,14 @@
   <!-- Nos Services Section -->
   <section id="services" class="services-section">
     <div class="container">
-      <h2 class="section-title">
+      <h2 class="section-title" appFadeUp [fadeThreshold]="0.1">
         Nos <span class="text-accent">Services</span>
       </h2>
 
       <div class="services-grid">
 
         <!-- Card 1 -->
-        <div class="service-card service-card--dark">
+        <div class="service-card service-card--dark" appFadeUp [fadeDelay]="0" [fadeThreshold]="0.1">
           <div class="service-image">
             <img src="/reseau-it.png" alt="Réseau Informatique">
           </div>
@@ -79,7 +79,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="service-card service-card--orange">
+        <div class="service-card service-card--orange" appFadeUp [fadeDelay]="120" [fadeThreshold]="0.1">
           <div class="service-image">
             <img src="/matériel-it-img.png" alt="Matériel informatique">
           </div>
@@ -96,7 +96,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="service-card service-card--dark">
+        <div class="service-card service-card--dark" appFadeUp [fadeDelay]="240" [fadeThreshold]="0.1">
           <div class="service-image">
             <img src="/énergie-solaire2.png" alt="Énergie solaire">
           </div>
@@ -116,15 +116,96 @@
     </div>
   </section>
 
+  <!-- Nos Produits Section -->
+  <section id="produits" class="products-section">
+    <div class="container">
+      <h2 class="section-title" appFadeUp [fadeThreshold]="0.1">
+        Nos <span class="text-accent">Produits</span>
+      </h2>
+      <p class="products-subtitle" appFadeUp [fadeDelay]="80" [fadeThreshold]="0.1">
+        IT Energy est votre partenaire de confiance pour le matériel
+        informatique, les réseaux professionnels et l'énergie solaire.
+      </p>
+
+      <div class="products-grid">
+
+        <!-- Produit 1 : Imprimantes -->
+        <div class="product-card" appFadeUp [fadeDelay]="0" [fadeThreshold]="0.1">
+          <div class="product-image-wrap">
+            <img src="/imprimante.png" alt="Imprimantes" loading="lazy" />
+          </div>
+          <p class="product-name">Imprimantes</p>
+        </div>
+
+        <!-- Produit 2 : Ordinateurs portables -->
+        <div class="product-card" appFadeUp [fadeDelay]="80" [fadeThreshold]="0.1">
+          <div class="product-image-wrap">
+            <img src="/ordi.png" alt="Ordinateurs portables" loading="lazy" />
+          </div>
+          <p class="product-name">Ordinateurs portable</p>
+        </div>
+
+        <!-- Produit 3 : Caméras thermiques -->
+        <div class="product-card" appFadeUp [fadeDelay]="160" [fadeThreshold]="0.1">
+          <div class="product-image-wrap">
+            <img src="/caméra-thermique.png" alt="Caméras thermiques" loading="lazy" />
+          </div>
+          <p class="product-name">Caméras thermique</p>
+        </div>
+
+        <!-- Produit 4 : Ordinateurs de bureau -->
+        <div class="product-card" appFadeUp [fadeDelay]="240" [fadeThreshold]="0.1">
+          <div class="product-image-wrap">
+            <img src="/ordi-bureau.png" alt="Ordinateurs de bureau" loading="lazy" />
+          </div>
+          <p class="product-name">Ordinateurs de bureau</p>
+        </div>
+
+        <!-- Produit 5 : Serveurs informatiques -->
+        <div class="product-card" appFadeUp [fadeDelay]="0" [fadeThreshold]="0.1">
+          <div class="product-image-wrap">
+            <img src="/serveur-informatique.png" alt="Serveurs informatiques" loading="lazy" />
+          </div>
+          <p class="product-name">Serveurs informatiques</p>
+        </div>
+
+        <!-- Produit 6 : Onduleurs -->
+        <div class="product-card" appFadeUp [fadeDelay]="80" [fadeThreshold]="0.1">
+          <div class="product-image-wrap">
+            <img src="/onduleur.png" alt="Onduleurs" loading="lazy" />
+          </div>
+          <p class="product-name">Onduleurs</p>
+        </div>
+
+        <!-- Produit 7 : Systèmes solaires -->
+        <div class="product-card" appFadeUp [fadeDelay]="160" [fadeThreshold]="0.1">
+          <div class="product-image-wrap">
+            <img src="/système-solaire.png" alt="Systèmes solaires" loading="lazy" />
+          </div>
+          <p class="product-name">Systèmes solaires</p>
+        </div>
+
+        <!-- Produit 8 : Antennes Ubiquiti -->
+        <div class="product-card" appFadeUp [fadeDelay]="240" [fadeThreshold]="0.1">
+          <div class="product-image-wrap">
+            <img src="/antenne-ubiquiti.png" alt="Antennes & Réseaux" loading="lazy" />
+          </div>
+          <p class="product-name">Antennes &amp; Réseaux</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Nos Partenaires Section -->
   <section class="partners-section">
     <div class="container">
-      <h2 class="section-title">Nos <span class="text-accent">Partenaires</span></h2>
+      <h2 class="section-title" appFadeUp [fadeThreshold]="0.1">Nos <span class="text-accent">Partenaires</span></h2>
       <div class="partners-grid">
-        <img src="houndegold (2).png" alt="Houndé Gold" class="partner-logo-img" />
-        <img src="neremining (2).png" alt="Néré Mining" class="partner-logo-img" />
-        <img src="sopamib (2).png" alt="Sopamib" class="partner-logo-img" />
-        <img src="particuliers.png" alt="particuliers" class="partner-logo-img" />
+        <img src="houndegold (2).png" alt="Houndé Gold" class="partner-logo-img" appFadeUp [fadeDelay]="0" [fadeThreshold]="0.1" />
+        <img src="neremining (2).png" alt="Néré Mining" class="partner-logo-img" appFadeUp [fadeDelay]="100" [fadeThreshold]="0.1" />
+        <img src="sopamib (2).png" alt="Sopamib" class="partner-logo-img" appFadeUp [fadeDelay]="200" [fadeThreshold]="0.1" />
+        <img src="particuliers.png" alt="particuliers" class="partner-logo-img" appFadeUp [fadeDelay]="300" [fadeThreshold]="0.1" />
       </div>
     </div>
   </section>
