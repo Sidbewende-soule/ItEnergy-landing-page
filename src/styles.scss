@@ -66,6 +66,10 @@ html {
   --pattern-opacity: var(--pattern-opacity-about);
 }
 
+.why-us-section {
+  --pattern-opacity: var(--pattern-opacity-why-us);
+}
+
 
 .info-section,
 .address-section,
@@ -105,4 +109,4 @@ html {
     transform: none;
     transition: none;
   }
-}
+}

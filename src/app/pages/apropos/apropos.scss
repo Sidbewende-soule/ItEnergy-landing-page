@@ -245,7 +245,7 @@ $white: #FFFFFF;
 
 // ── POURQUOI NOUS CHOISIR ─────────────────────────────────────────────
 .why-us-section {
-  background-color: $bg-light;
+  @include apply-pattern($bg-light);
   overflow: hidden; // clip overflowing image at section level
 }
 
@@ -482,6 +482,7 @@ $white: #FFFFFF;
   .process-section,
   .why-us-section {
     padding: 60px 0;
+    @include apply-pattern($bg-light);
   }
 
   .cta-section {
