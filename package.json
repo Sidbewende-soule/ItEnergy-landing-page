@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npx --package @angular/cli ng build",
+    "build": "npx --package @angular/cli ng build --configuration production --base-href /ItEnergy-landing-page/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "predeploy": "npm run build",
+    "deploy": "cd dist/itenergy/browser && git init && git checkout -b gh-pages && git add . && git commit -m \"Deploy\" && git push -f https://github.com/Sidbewende-soule/ItEnergy-landing-page.git gh-pages"
   },
   "private": true,
   "packageManager": "npm@11.18.0",
@@ -17,13 +19,16 @@
     "@angular/forms": "^22.0.0",
     "@angular/platform-browser": "^22.0.0",
     "@angular/router": "^22.0.0",
+    "gh-pages": "^6.3.0",
     "rxjs": "~7.8.0",
+    "save-dev": "^0.0.1-security",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular/build": "^22.0.1",
     "@angular/cli": "^22.0.1",
     "@angular/compiler-cli": "^22.0.0",
+    "angular-cli-ghpages": "^3.1.0",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
